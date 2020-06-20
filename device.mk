@@ -6,8 +6,8 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/ginkgo/ginkgo-vendor.mk)
@@ -38,8 +38,8 @@ PRODUCT_PACKAGES += \
     BluetoothResCommon
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
+# PRODUCT_PACKAGES += \
+#     Snap
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -58,16 +58,16 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0_system
 
 # IFAA manager
-PRODUCT_PACKAGES += \
-    IFAAService \
-    org.ifaa.android.manager
+# PRODUCT_PACKAGES += \
+#     IFAAService \
+#     org.ifaa.android.manager
 
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+# PRODUCT_BOOT_JARS += \
+#     org.ifaa.android.manager
 
 # IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common
+# PRODUCT_PACKAGES += \
+#     ims-ext-common
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -84,8 +84,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_ginkgo
 
 # Livedisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
+# PRODUCT_PACKAGES += \
+#     lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -96,8 +96,8 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # Parts
-PRODUCT_PACKAGES += \
-    XiaomiParts
+# PRODUCT_PACKAGES += \
+#     XiaomiParts
 
 # QTI
 PRODUCT_COPY_FILES += \
@@ -117,19 +117,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
+# PRODUCT_PACKAGES += \
+#     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# PRODUCT_BOOT_JARS += \
+#     telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+# PRODUCT_PACKAGES += \
+#     lineage.trust@1.0-service
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
@@ -139,5 +139,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+# PRODUCT_BOOT_JARS += \
+#     WfdCommon
